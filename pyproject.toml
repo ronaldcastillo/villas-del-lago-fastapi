@@ -1,0 +1,26 @@
+[project]
+name = "villas-del-lago-fastapi"
+version = "1.0.0"
+description = "Villas del Lago backend — FastAPI port of the Firebase functions"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "firebase-admin>=6.5",
+    "google-cloud-storage>=2.16",
+    "google-cloud-documentai>=2.29",
+    "google-cloud-vision>=3.7",
+    "openai>=1.40",
+    "qrcode[pil]>=7.4",
+    "apscheduler>=3.11,<4",
+    "pydantic-settings>=2.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "httpx>=0.27",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
